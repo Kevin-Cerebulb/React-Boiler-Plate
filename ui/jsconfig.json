@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"esnext",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"module": "esnext",
+		"target": "esnext",
+		"moduleResolution": "bundler",
+		"jsx": "preserve",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		}
+	},
+	"include": [
+		"./src/**/*.js",
+		"./src/**/*.jsx"
+	],
+	"exclude": [
+		"node_modules",
+		"build"
+	]
+}
