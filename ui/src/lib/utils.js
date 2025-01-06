@@ -23,3 +23,12 @@ export function dateDisplayFormat(date) {
 export function datePPPFormat(date) {
 	return format(new Date(date), 'PPP');
 }
+
+export function parseError(errors) {
+	let error = {};
+	Object.entries(errors).forEach(([key, value]) => {
+		error[key] = value._errors?.[0];
+	});
+
+	return error;
+}

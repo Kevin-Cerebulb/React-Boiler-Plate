@@ -1,12 +1,21 @@
 import {useCurrentDateTime} from "@/hooks/use-current-date-time.jsx";
+import { cn } from "@/lib/utils";
 import {Flex, Text} from "@radix-ui/themes";
 
-export function CurrentDateTimeBlock(){
+/** CurrentDateTimeBlock Component
+ * @param {{
+ * showDate?: boolean;
+ * showTime?: boolean;
+ * className?: string;
+ * }} props
+ * @returns 
+ */
+export function CurrentDateTimeBlock({showDate = true, showTime = true, className}) {
     const { currentDate, currentTime } = useCurrentDateTime();
     return (
         <Flex direction="column">
-            <Text className="text-base font-medium">{currentDate}</Text>
-            <Text className="text-base font-medium">{currentTime}</Text>
+           { showDate ? <Text className={cn("text-base font-medium", className)}>{currentDate}</Text> : ""}
+           { showTime ?  <Text className={cn("text-base font-medium", className)}>{currentTime}</Text> : ""}
         </Flex>
     );
 }
