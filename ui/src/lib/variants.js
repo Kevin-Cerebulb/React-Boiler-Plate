@@ -17,6 +17,23 @@ const inputVariants = cva(
   }
 );
 
+const textareaVariants = cva(
+  "flex min-h-[60px] w-full rounded-md border px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+  {
+    variants: {
+      variant: {
+        default: "border-input bg-transparent",
+        primary: "border-blue-500 bg-blue-100",
+        secondary: "border-gray-500 bg-gray-100",
+        danger: "border-red-500 bg-red-100",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
+
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
@@ -70,4 +87,4 @@ const labelVariants = cva(
     "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
 );
 
-export { buttonVariants, inputVariants, sheetVariants, labelVariants };
+export { buttonVariants, inputVariants, sheetVariants, labelVariants, textareaVariants };
