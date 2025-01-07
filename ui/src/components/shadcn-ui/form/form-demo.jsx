@@ -34,7 +34,7 @@ export function FormDemo() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(submitHandler)}
-        className="w-2/3 space-y-6"
+        className="space-y-6"
       >
         {/* Email Control */}
         <FormField

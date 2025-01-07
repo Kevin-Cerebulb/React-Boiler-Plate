@@ -24,7 +24,7 @@ export function Footer() {
 					</a>
 				</p>
 				<p className="flex items-center gap-1 text-sm font-medium">
-					Design and Developed by: <CerebulbLogo />
+					Developed by: <CerebulbLogo />
 				</p>
 			</div>
 		</footer>
