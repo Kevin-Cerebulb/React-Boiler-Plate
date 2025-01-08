@@ -11,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../card";
+import { barConfig } from "@/lib/chart.config";
 
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
@@ -21,18 +22,8 @@ const chartData = [
   { month: "June", desktop: 214, mobile: 140 },
 ];
 
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "#2563eb",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "#60a5fa",
-  },
-};
 
-export function Component() {
+export function BarChartDemo() {
   return (
     <Card className="w-1/3">
       <CardHeader>
@@ -40,7 +31,7 @@ export function Component() {
         <CardDescription>This is the information of Bar chart</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+        <ChartContainer config={barConfig} className="min-h-[200px] w-full">
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />

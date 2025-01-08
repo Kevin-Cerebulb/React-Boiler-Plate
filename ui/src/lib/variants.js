@@ -9,6 +9,7 @@ const inputVariants = cva(
         primary: "border-blue-500 bg-blue-100",
         secondary: "border-gray-500 bg-gray-100",
         danger: "border-red-500 bg-red-100",
+        ghost: "border-card-glass bg-card-glass",
       },
     },
     defaultVariants: {
@@ -26,6 +27,7 @@ const textareaVariants = cva(
         primary: "border-blue-500 bg-blue-100",
         secondary: "border-gray-500 bg-gray-100",
         danger: "border-red-500 bg-red-100",
+        glass: "border-card-glass/20 bg-card-glass/20",
       },
     },
     defaultVariants: {
