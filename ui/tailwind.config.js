@@ -17,7 +17,8 @@ export default {
   			foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
+  				foreground: 'hsl(var(--card-foreground))',
+  				glass: 'hsl(var(--glass-background)/ 0.2)'
   			},
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
@@ -65,7 +66,8 @@ export default {
   			}
   		},
   		animation: {
-  			rippling: 'rippling var(--duration) ease-out'
+  			rippling: 'rippling var(--duration) ease-out',
+  			meteor: 'meteor 5s linear infinite'
   		},
   		keyframes: {
   			rippling: {
@@ -74,6 +76,19 @@ export default {
   				},
   				'100%': {
   					transform: 'scale(2)',
+  					opacity: '0'
+  				}
+  			},
+  			meteor: {
+  				'0%': {
+  					transform: 'rotate(215deg) translateX(0)',
+  					opacity: '1'
+  				},
+  				'70%': {
+  					opacity: '1'
+  				},
+  				'100%': {
+  					transform: 'rotate(215deg) translateX(-500px)',
   					opacity: '0'
   				}
   			}
